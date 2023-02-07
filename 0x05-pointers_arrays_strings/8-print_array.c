@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* print_array - write a function that prints n elements of an array 
+* print_array - write a function that prints n elements of an array
 * of integers and \n
 * @a: int to check
 * @n: int to check
