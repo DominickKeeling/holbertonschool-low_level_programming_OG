@@ -3,7 +3,7 @@
 * _strncpy - write a function that copys a string
 * @dest: destination pointer
 * @src: source pointer
-* @n : input
+* @n: input
 * Return: pointer for destination
 */
 char *_strncpy(char *dest, char *src, int n)
@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 	i = 0;
 	while (i < n && src[i] != '\0')
 	{
-		dest[i] = '\0';
+		dest[i] = src[i];;
 		i++;
 	}
 	while (i < n)
