@@ -1,4 +1,5 @@
  #include "holberton.h"
+
 /**
 * _strncpy - write a function that copys a string
 * @dest: destination pointer
@@ -6,6 +7,7 @@
 * @n: input
 * Return: pointer for destination
 */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
