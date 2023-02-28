@@ -1,31 +1,30 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 /**
-* _calloc - write a function that allocates memory to an array using malloc
-* The _calloc function allocates memory for an array of nmemb elements of
-* size bytes each and returns a pointer to the allocated memory.
-* The memory is set to zero
-* If nmemb or size is 0, then _calloc returns NULL
-* If malloc fails, then _calloc returns NULL
-* @nmemb: num of elements
-* @size: num of bytes
-* Return: pointer
-*/
+ * _calloc - allocates memory and sets everything to zero
+ * @nmemb: number of elements
+ * @size: number of bytes
+ * Return: pointer to allocated memory
+ */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
 	unsigned int i;
 
-	if ((nmemb == 0) || (size = 0))
+	if ((nmemb == 0) || (size == 0))
 		return (NULL);
-
 	p = malloc(nmemb * size);
 	if (p == NULL)
 		return (NULL);
-
-	for (i = 0; i < (nmemb * size); i++)
+	i = 0;
+	while (i < nmemb * size)
+	{
 		p[i] = 0;
-
+		i++;
+	}
 	return (p);
 }
+
